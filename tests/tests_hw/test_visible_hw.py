@@ -5,10 +5,6 @@ def test_visible_section_1_content(browser):
     accordion_page = Accordion(browser)
     accordion_page.visit()
     assert accordion_page.section_1_content.visible()
-
-def test_not_visible_section_1_content(browser):
-    accordion_page = Accordion(browser)
-    accordion_page.visit()
     accordion_page.section_1_heading.click()
     time.sleep(2)
     assert not accordion_page.section_1_content.visible()
